@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../lib/internal/Magento/Framework/Event/etc/events.xsd">
+    
+    <event name="sales_order_save_after">
+        <observer name="sales_order_save_after_yotpo_observer" instance="Yotpo\Yotpo\Model\Observer\PurchaseObserver"/>
+    </event>
+	<event name="layout_generate_blocks_after">
+        <observer name="remove_block" instance="Yotpo\Yotpo\Model\Observer\RemoveBlock" />
+    </event>
+</config>
