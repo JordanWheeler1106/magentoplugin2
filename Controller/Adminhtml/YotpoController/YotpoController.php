@@ -30,7 +30,6 @@ public function __construct(
         parent::__construct($context);
     }
 
-
     public function execute()
     { 
       try {
@@ -67,7 +66,6 @@ public function __construct(
                     ->setPageSize(self::MAX_BULK_SIZE);
       $pages = $salesCollection->getLastPageNumber();
       $success = true;
-	  
       do {
         try {
             $offset++;
